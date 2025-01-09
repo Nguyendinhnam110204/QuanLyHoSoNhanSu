@@ -478,46 +478,54 @@
         </div>
 
         <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Lấy tất cả các nút "Cập Nhật"
-            const updateButtons = document.querySelectorAll('.btn-update');
+            document.addEventListener('DOMContentLoaded', function() {
+                // Lấy tất cả các nút "Cập Nhật"
+                const updateButtons = document.querySelectorAll('.btn-update');
 
-            updateButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Lấy giá trị từ các thuộc tính data-
-                    const maNhanSu = this.getAttribute("data-MaNhanSu");
-                    const maDinhDanh = this.getAttribute("data-MaDinhDanh");
-                    const hoTen = this.getAttribute("data-HoTen");
-                    const gioiTinh = this.getAttribute("data-GioiTinh");
-                    const namSinh = this.getAttribute("data-NamSinh");
-                    const CMND_CCCD = this.getAttribute("data-CMND_CCCD");
-                    const soDienThoai = this.getAttribute("data-SoDienThoai");
-                    const email = this.getAttribute("data-Email");
-                    const diaChi = this.getAttribute("data-DiaChi");
-                    const ngayVaoLam = this.getAttribute("data-NgayVaoLam");
-                    const ngayNghiHuu = this.getAttribute("data-NgayNghiHuu");
-                    const tinhTrangLamViec = this.getAttribute("data-TinhTrangLamViec");
-                    const loaiHopDong = this.getAttribute("data-LoaiHopDong");
-                    const tenChucVu = this.getAttribute("data-TenChucVu");
+                updateButtons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // Lấy giá trị từ các thuộc tính data-
+                        const maNhanSu = this.getAttribute("data-MaNhanSu");
+                        const maDinhDanh = this.getAttribute("data-MaDinhDanh");
+                        const hoTen = this.getAttribute("data-HoTen");
+                        const gioiTinh = this.getAttribute("data-GioiTinh");
+                        const namSinh = this.getAttribute("data-NamSinh");
+                        const CMND_CCCD = this.getAttribute("data-CMND_CCCD");
+                        const soDienThoai = this.getAttribute("data-SoDienThoai");
+                        const email = this.getAttribute("data-Email");
+                        const diaChi = this.getAttribute("data-DiaChi");
+                        const ngayVaoLam = this.getAttribute("data-NgayVaoLam");
+                        const ngayNghiHuu = this.getAttribute("data-NgayNghiHuu");
+                        const tinhTrangLamViec = this.getAttribute("data-TinhTrangLamViec");
+                        const loaiHopDong = this.getAttribute("data-LoaiHopDong");
+                        const tenChucVu = this.getAttribute("data-TenChucVu");
 
-                    // Cập nhật thông tin vào modal
-                    document.getElementById("update_MaNhanSu").value = maNhanSu;
-                    document.getElementById("update_MaDinhDanh").value = maDinhDanh;
-                    document.getElementById("update_HoTen").value = hoTen;
-                    document.getElementById("update_GioiTinh").value = gioiTinh;
-                    document.getElementById("update_NamSinh").value = namSinh;
-                    document.getElementById("update_CMND_CCCD").value = CMND_CCCD;
-                    document.getElementById("update_SoDienThoai").value = soDienThoai;
-                    document.getElementById("update_Email").value = email;
-                    document.getElementById("update_DiaChi").value = diaChi;
-                    document.getElementById("update_NgayVaoLam").value = ngayVaoLam;
-                    document.getElementById("update_NgayNghiHuu").value = ngayNghiHuu;
-                    document.getElementById("update_TinhTrangLamViec").value = tinhTrangLamViec;
-                    document.getElementById("update_LoaiHopDong").value = loaiHopDong;
-                    document.getElementById("update_TenChucVu").value = tenChucVu;
+                        // Cập nhật thông tin vào modal
+                        document.getElementById("update_MaNhanSu").value = maNhanSu;
+                        document.getElementById("update_MaDinhDanh").value = maDinhDanh;
+                        document.getElementById("update_HoTen").value = hoTen;
+                        document.getElementById("update_GioiTinh").value = gioiTinh;
+                        document.getElementById("update_NamSinh").value = namSinh;
+                        document.getElementById("update_CMND_CCCD").value = CMND_CCCD;
+                        document.getElementById("update_SoDienThoai").value = soDienThoai;
+                        document.getElementById("update_Email").value = email;
+                        document.getElementById("update_DiaChi").value = diaChi;
+                        document.getElementById("update_NgayVaoLam").value = ngayVaoLam;
+                        document.getElementById("update_NgayNghiHuu").value = ngayNghiHuu;
+                        document.getElementById("update_TinhTrangLamViec").value = tinhTrangLamViec;
+                        document.getElementById("update_LoaiHopDong").value = loaiHopDong;
+
+                        // Xử lý select option cho dropdown chức vụ
+                        const chucVuDropdown = document.getElementById("update_TenChucVu");
+                        for (let i = 0; i < chucVuDropdown.options.length; i++) {
+                            if (chucVuDropdown.options[i].text === tenChucVu) {
+                                chucVuDropdown.selectedIndex = i;
+                                break;
+                            }
+                        }
+                    });
                 });
             });
-        });
 
         button.addEventListener('click', function() {
             // Các giá trị khác
