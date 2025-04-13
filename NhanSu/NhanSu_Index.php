@@ -320,7 +320,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="NamSinh">Năm sinh</label>
-                                <input type="date" class="form-control" id="NamSinh" name="NamSinh" required>
+                                <input type="date" class="form-control" id="NamSinh" name="NamSinh" max="<?php echo date('Y-m-d', strtotime('-18 years')); ?>" required>
                             </div>
                             <div class="form-group">
                                 <label for="CMND_CCCD">CMND_CCCD</label>
@@ -344,7 +344,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="NgayNghiHuu">Ngày nghỉ hưu</label>
-                                <input type="date" class="form-control" id="NgayNghiHuu" name="NgayNghiHuu" required>
+                                <input type="date" class="form-control" id="NgayNghiHuu" name="NgayNghiHuu">
                             </div>
                             <div class="form-group">
                                 <label for="TinhTrangLamViec">Tình trạng làm việc</label>
@@ -439,8 +439,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="update_NgayNghiHuu">Ngày nghỉ hưu</label>
-                                <input type="date" class="form-control" id="update_NgayNghiHuu" name="NgayNghiHuu"
-                                    required>
+                                <input type="date" class="form-control" id="update_NgayNghiHuu" name="NgayNghiHuu">
                             </div>
                             <div class="form-group">
                                 <label for="update_TinhTrangLamViec">Tình trạng làm việc</label>
@@ -452,8 +451,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="update_LoaiHopDong">Loại hợp đồng</label>
-                                <input type="text" class="form-control" id="update_LoaiHopDong" name="LoaiHopDong"
-                                    required>
+                                <input type="text" class="form-control" id="update_LoaiHopDong" name="LoaiHopDong">
                             </div>
                             <div class="form-group">
                                 <label for="update_TenChucVu">Chức vụ</label>
